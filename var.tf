@@ -4,8 +4,3 @@ variable "aws_region" {
   default     = "us-east-1"
 
 }
-
-variable "green_lb_target_group_name" {
-  description = "The name of the green load balancer target group."
-  type        = string
-}
