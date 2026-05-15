@@ -35,8 +35,8 @@ module "codedeploy" {
 
   ecs_cluster_name                 = module.ecs.cluster_id
   ecs_service_name                 = module.ecs.services["web"].id
-  lb_listener_arns                 = [module.alb.listeners["http"].arn]
-  test_traffic_route_listener_arns = [module.alb.listeners["test"].arn]
+  lb_listener_arns                 = [module.alb.http_listener_arn]
+  test_traffic_route_listener_arns = [module.alb.test_listener_arn]
   blue_lb_target_group_name        = module.alb.target_groups["blue"].name
   green_lb_target_group_name       = module.alb.target_groups["green"].name
 
