@@ -22,7 +22,7 @@ module "ecs" {
       create_task_definition = false
       container_definitions  = {}
 
-      subnet_ids        = var.private_subnet_ids
+      subnet_ids         = var.private_subnet_ids
       security_group_ids = [var.ecs_security_group_id]
 
       load_balancer = {
@@ -37,4 +37,4 @@ module "ecs" {
     }
   }
 }
- 
+
