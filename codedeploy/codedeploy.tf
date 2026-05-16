@@ -11,7 +11,7 @@ data "aws_iam_role" "codedeploy" {
 resource "aws_codedeploy_deployment_group" "this" {
   app_name               = aws_codedeploy_app.this.name
   deployment_group_name  = "Blue-Green-Deployment"
-  service_role_arn       = var.codedeploy_service_role_arn
+  service_role_arn       = data.aws_iam_role.codedeploy.arn
   deployment_config_name = "CodeDeployDefault.ECSCanary10Percent5Minutes"
 
   auto_rollback_configuration {
