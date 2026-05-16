@@ -4,3 +4,8 @@ variable "aws_region" {
   default     = "us-east-1"
 
 }
+
+variable "codedeploy_service_role_arn" {
+  description = "ARN of an existing IAM role for CodeDeploy deployment group."
+  type        = string
+}

@@ -10,6 +10,6 @@ output "services" {
   value = module.ecs.services
 }
 output "service_name" {
-  value = module.ecs.services["web"].name
+  value       = module.ecs.services["web"].name
   description = "Name of the ECS web service"
 }

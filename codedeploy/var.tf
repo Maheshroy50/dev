@@ -29,3 +29,8 @@ variable "green_lb_target_group_name" {
   type        = string
 }
 
+variable "codedeploy_service_role_arn" {
+  description = "ARN of an existing IAM role for CodeDeploy deployment group service_role_arn."
+  type        = string
+}
+
